@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a3db832f-a27f-4959-8c89-7a0ca0ddca27">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cadastroVoo.`idcadastroVoo` AS cadastroVoo_idcadastroVoo,
+     cadastroVoo.`destino` AS cadastroVoo_destino,
+     cadastroVoo.`escalas` AS cadastroVoo_escalas,
+     cadastroVoo.`maxPassageiro` AS cadastroVoo_maxPassageiro,
+     cadastroVoo.`nome` AS cadastroVoo_nome,
+     cadastroVoo.`origem` AS cadastroVoo_origem
+FROM
+     `cadastroVoo` cadastroVoo]]>
+	</queryString>
+	<field name="cadastroVoo_idcadastroVoo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[idcadastroVoo]]></fieldDescription>
+	</field>
+	<field name="cadastroVoo_destino" class="java.lang.String">
+		<fieldDescription><![CDATA[destino]]></fieldDescription>
+	</field>
+	<field name="cadastroVoo_escalas" class="java.lang.String">
+		<fieldDescription><![CDATA[escalas]]></fieldDescription>
+	</field>
+	<field name="cadastroVoo_maxPassageiro" class="java.lang.Integer">
+		<fieldDescription><![CDATA[maxPassageiro]]></fieldDescription>
+	</field>
+	<field name="cadastroVoo_nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="cadastroVoo_origem" class="java.lang.String">
+		<fieldDescription><![CDATA[origem]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="351" y="29" width="117" height="20" uuid="ef26610a-93e2-4865-a040-e90d9e3df022"/>
+				<text><![CDATA[RELATORIO DE VOO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="27" uuid="126d64e1-707c-4e1a-8149-e670c9f3058c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="0" width="100" height="20" uuid="733e8f7d-c9ab-4c7c-aefa-03629af907cf"/>
+				<text><![CDATA[COIDGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="2" width="100" height="20" uuid="d2ac4397-b0a3-4e77-a5b0-2642dcca1a4a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="1" width="100" height="20" uuid="81007d1f-4c54-4839-911b-0d5162a8726b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[DESTINO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="387" y="3" width="100" height="20" uuid="64c6a098-2935-452b-9a40-8de2c47c0b98"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ORIGEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="3" width="100" height="20" uuid="2d57f9b0-4242-45d1-891a-22ef183aa46e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ESCALAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="3" width="100" height="20" uuid="86f5fb2d-b42a-4c96-a2eb-9de26e9f13dd"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[PASSAGEIROS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="4" width="98" height="20" uuid="6ed3c894-5753-403c-b329-aeb0fab77a06"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cadastroVoo_idcadastroVoo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="5" width="100" height="20" uuid="d617f15a-199c-4ab4-8baf-f85b3adbe3b3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cadastroVoo_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="5" width="100" height="20" uuid="75adf675-1dbd-4132-935d-c21b2910c310"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cadastroVoo_destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="5" width="100" height="20" uuid="825ac5ba-f084-45f2-a133-382cbae45f95"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cadastroVoo_origem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="5" width="100" height="20" uuid="ea68ac9a-113e-4cc4-b9db-4c41ba2af70a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cadastroVoo_escalas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="4" width="100" height="20" uuid="c35489f2-eb05-4c54-989a-49a6ed0d2bd8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cadastroVoo_maxPassageiro}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

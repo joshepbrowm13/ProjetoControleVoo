@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8d78d5e-5723-4545-8bbf-fb5b1f4dea6e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     efetuaReversa.`idefetuaReversa` AS efetuaReversa_idefetuaReversa,
+     efetuaReversa.`data` AS efetuaReversa_data,
+     efetuaReversa.`hora` AS efetuaReversa_hora,
+     efetuaReversa.`cadastroVoo_idcadastroVoo` AS efetuaReversa_cadastroVoo_idcadastroVoo,
+     efetuaReversa.`cliente_idcliente` AS efetuaReversa_cliente_idcliente
+FROM
+     `efetuaReversa` efetuaReversa]]>
+	</queryString>
+	<field name="efetuaReversa_idefetuaReversa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[idefetuaReversa]]></fieldDescription>
+	</field>
+	<field name="efetuaReversa_data" class="java.sql.Date">
+		<fieldDescription><![CDATA[data]]></fieldDescription>
+	</field>
+	<field name="efetuaReversa_hora" class="java.sql.Time">
+		<fieldDescription><![CDATA[hora]]></fieldDescription>
+	</field>
+	<field name="efetuaReversa_cadastroVoo_idcadastroVoo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cadastroVoo_idcadastroVoo]]></fieldDescription>
+	</field>
+	<field name="efetuaReversa_cliente_idcliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cliente_idcliente]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="29" width="100" height="20" uuid="23343e00-974f-4422-a86c-87a2fc5c3554"/>
+				<text><![CDATA[LISTA RESERVA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="1" width="551" height="22" uuid="c1842c7c-0dda-478b-ae30-fd1bf8fe76c8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="4" width="100" height="20" uuid="c415450d-e539-4f5b-808d-f3e7d2c4dc74"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CODIGO RESERVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="3" width="100" height="20" uuid="c005aa7c-e5e6-4d4b-af2f-59c3206dedd4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="4" width="100" height="20" uuid="99a29a3e-a1c5-4a38-8b0b-9d35a18df882"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="5" width="100" height="20" uuid="d0496678-403b-4af1-886e-fc07ee502be0"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CLIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="4" width="100" height="20" uuid="d83a26f5-444c-4834-8ede-95a89cafbea3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[VOO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="14" width="100" height="20" uuid="f7507b5d-9dd7-4f2a-9d95-9c306301a117"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{efetuaReversa_idefetuaReversa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="14" width="100" height="20" uuid="98d47626-a684-4f32-800f-55facd1eb22f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{efetuaReversa_data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="14" width="100" height="20" uuid="6021778a-60e7-43cf-99ee-345bfcac4c8f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{efetuaReversa_hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="14" width="100" height="20" uuid="acb29ee4-42b1-4362-8658-547944675511"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{efetuaReversa_cliente_idcliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="14" width="100" height="20" uuid="d7c7d327-1fc0-414e-bf27-2c67df4545e0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{efetuaReversa_cadastroVoo_idcadastroVoo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
